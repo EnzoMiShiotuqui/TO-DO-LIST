@@ -28,7 +28,7 @@
 ```bash
 # Comando para clonar o repositório
 
-$ git clone https://github.com/manualdodev/todolist-fullstack.git
+$ git clone [https://github.com/manualdodev/todolist-fullstack.git](https://github.com/EnzoMiShiotuqui/TO-DO-LIST.git)
 
 ````
 
