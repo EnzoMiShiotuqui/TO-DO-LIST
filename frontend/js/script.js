@@ -8,7 +8,7 @@ const API_PORT = '3000'; // Defina aqui a porta da sua API
 const BASE_URL = `https://to-do-list-f29e.onrender.com`; // Montar a URL base
 
 const fetchTasks = async () => {
-  const response = await fetch(`${BASE_URL}/tasks`,{
+  const response = await fetch(`${BASE_URL}/tasks`, {
     mode: 'no-cors'
   }); // Usar BASE_URL
   const tasks = await response.json();

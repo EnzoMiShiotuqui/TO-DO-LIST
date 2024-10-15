@@ -3,7 +3,7 @@ FROM mysql:latest
 
 # Defina as variáveis de ambiente
 ENV MYSQL_ROOT_PASSWORD=180505
-ENV MYSQL_DATABASE=todo_list 
+ENV MYSQL_DATABASE=todo_list  
 ENV MYSQL_MAJOR=innovation
 ENV MYSQL_VERSION=9.0.1-1.el9
 ENV MYSQL_SHELL_VERSION=9.0.1-1.el9
