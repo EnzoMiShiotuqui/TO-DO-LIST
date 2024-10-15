@@ -5,10 +5,12 @@ const inputTask = document.querySelector('.input-task');
 // Carregar as variáveis de ambiente
 const API_URL = 'http://localhost'; // Defina aqui a URL da sua API
 const API_PORT = '3000'; // Defina aqui a porta da sua API
-const BASE_URL = `${API_URL}:${API_PORT}`; // Montar a URL base
+const BASE_URL = `https://to-do-list-f29e.onrender.com`; // Montar a URL base
 
 const fetchTasks = async () => {
-  const response = await fetch(`${BASE_URL}/tasks`); // Usar BASE_URL
+  const response = await fetch(`${BASE_URL}/tasks`,{
+    mode: 'no-cors'
+  }); // Usar BASE_URL
   const tasks = await response.json();
   return tasks;
 }
@@ -20,6 +22,7 @@ const addTask = async (event) => {
 
   await fetch(`${BASE_URL}/tasks`, {
     method: 'POST',
+    mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(task),
   });
@@ -31,6 +34,7 @@ const addTask = async (event) => {
 const deleteTask = async (id) => {
   await fetch(`${BASE_URL}/tasks/${id}`, {
     method: 'DELETE',
+    mode: 'no-cors',
   });
 
   loadTasks();
@@ -39,6 +43,7 @@ const deleteTask = async (id) => {
 const updateTask = async ({ id, title, status }) => {
   await fetch(`${BASE_URL}/tasks/${id}`, {
     method: 'PUT',
+    mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ title, status }),
   });
